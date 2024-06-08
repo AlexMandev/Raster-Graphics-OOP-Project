@@ -127,7 +127,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bitset.cpp" />
+    <ClCompile Include="Image.cpp" />
+    <ClCompile Include="ImageCollection.cpp" />
+    <ClCompile Include="ImageFactory.cpp" />
+    <ClCompile Include="ImagePBM.cpp" />
+    <ClCompile Include="ImagePGM.cpp" />
+    <ClCompile Include="ImagePPM.cpp" />
     <ClCompile Include="RasterGraphics.cpp" />
+    <ClCompile Include="String.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bitset.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="ImageCollection.h" />
+    <ClInclude Include="ImageFactory.h" />
+    <ClInclude Include="ImagePBM.h" />
+    <ClInclude Include="ImagePGM.h" />
+    <ClInclude Include="ImagePPM.h" />
+    <ClInclude Include="String.h" />
+    <ClInclude Include="Vector.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

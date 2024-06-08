@@ -3,8 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePPM.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\ImagePPM.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Vector.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\Vector.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImageFactory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\ImageFactory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\RasterGraphics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\RasterGraphics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePPM.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\ImagePPM.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImageCollection.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\ImageCollection.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePBM.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\ImagePBM.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImageCollection.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\ImageCollection.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePBM.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\ImagePBM.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Image.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\Image.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Bitset.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\Bitset.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Bitset.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\Bitset.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Image.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\Image.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImageFactory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\ImageFactory.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePGM.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\ImagePGM.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePGM.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{276DB80F-5794-4F77-9059-588DC8FCF02F}|RasterGraphics\\RasterGraphics.vcxproj|solutionrelative:RasterGraphics\\ImagePGM.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +79,206 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ImagePPM.h",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePPM.h",
+              "RelativeDocumentMoniker": "RasterGraphics\\ImagePPM.h",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePPM.h",
+              "RelativeToolTip": "RasterGraphics\\ImagePPM.h",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-04T09:51:13.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ImagePPM.cpp",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePPM.cpp",
+              "RelativeDocumentMoniker": "RasterGraphics\\ImagePPM.cpp",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePPM.cpp",
+              "RelativeToolTip": "RasterGraphics\\ImagePPM.cpp",
+              "ViewState": "AQIAADkAAAAAAAAAAAAcwEkAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T10:31:07.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Vector.hpp",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Vector.hpp",
+              "RelativeDocumentMoniker": "RasterGraphics\\Vector.hpp",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Vector.hpp",
+              "RelativeToolTip": "RasterGraphics\\Vector.hpp",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-08T11:42:01.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Image.h",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Image.h",
+              "RelativeDocumentMoniker": "RasterGraphics\\Image.h",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Image.h",
+              "RelativeToolTip": "RasterGraphics\\Image.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-03T13:42:07.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ImagePBM.cpp",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePBM.cpp",
+              "RelativeDocumentMoniker": "RasterGraphics\\ImagePBM.cpp",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePBM.cpp",
+              "RelativeToolTip": "RasterGraphics\\ImagePBM.cpp",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAcwBwAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-07T18:36:52.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Bitset.cpp",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Bitset.cpp",
+              "RelativeDocumentMoniker": "RasterGraphics\\Bitset.cpp",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Bitset.cpp",
+              "RelativeToolTip": "RasterGraphics\\Bitset.cpp",
+              "ViewState": "AQIAADoAAAAAAAAAAAAvwEwAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-07T18:30:09.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Bitset.h",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Bitset.h",
+              "RelativeDocumentMoniker": "RasterGraphics\\Bitset.h",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Bitset.h",
+              "RelativeToolTip": "RasterGraphics\\Bitset.h",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-07T18:27:40.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ImageCollection.cpp",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImageCollection.cpp",
+              "RelativeDocumentMoniker": "RasterGraphics\\ImageCollection.cpp",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImageCollection.cpp",
+              "RelativeToolTip": "RasterGraphics\\ImageCollection.cpp",
+              "ViewState": "AQIAACQAAAAAAAAAAAAvwDAAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-07T09:01:38.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ImageCollection.h",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImageCollection.h",
+              "RelativeDocumentMoniker": "RasterGraphics\\ImageCollection.h",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImageCollection.h",
+              "RelativeToolTip": "RasterGraphics\\ImageCollection.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-07T08:58:54.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ImageFactory.cpp",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImageFactory.cpp",
+              "RelativeDocumentMoniker": "RasterGraphics\\ImageFactory.cpp",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImageFactory.cpp",
+              "RelativeToolTip": "RasterGraphics\\ImageFactory.cpp",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAvwF0AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-05T09:10:49.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ImageFactory.h",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImageFactory.h",
+              "RelativeDocumentMoniker": "RasterGraphics\\ImageFactory.h",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImageFactory.h",
+              "RelativeToolTip": "RasterGraphics\\ImageFactory.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-05T07:55:11.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ImagePGM.cpp",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePGM.cpp",
+              "RelativeDocumentMoniker": "RasterGraphics\\ImagePGM.cpp",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePGM.cpp",
+              "RelativeToolTip": "RasterGraphics\\ImagePGM.cpp",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAvwFsAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T11:17:58.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ImagePGM.h",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePGM.h",
+              "RelativeDocumentMoniker": "RasterGraphics\\ImagePGM.h",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePGM.h",
+              "RelativeToolTip": "RasterGraphics\\ImagePGM.h",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-04T08:03:28.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Image.cpp",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Image.cpp",
+              "RelativeDocumentMoniker": "RasterGraphics\\Image.cpp",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\Image.cpp",
+              "RelativeToolTip": "RasterGraphics\\Image.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-04T10:19:56.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "RasterGraphics.cpp",
               "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\RasterGraphics.cpp",
               "RelativeDocumentMoniker": "RasterGraphics\\RasterGraphics.cpp",
               "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\RasterGraphics.cpp",
               "RelativeToolTip": "RasterGraphics\\RasterGraphics.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-03T13:21:22.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ImagePBM.h",
+              "DocumentMoniker": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePBM.h",
+              "RelativeDocumentMoniker": "RasterGraphics\\ImagePBM.h",
+              "ToolTip": "C:\\Users\\Aleks\\Downloads\\Raster-Graphics-OOP-Project\\RasterGraphics\\RasterGraphics\\ImagePBM.h",
+              "RelativeToolTip": "RasterGraphics\\ImagePBM.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-04T07:48:52.62Z",
               "EditorCaption": ""
             }
           ]
