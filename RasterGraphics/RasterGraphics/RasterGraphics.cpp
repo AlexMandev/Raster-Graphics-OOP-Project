@@ -1,10 +1,9 @@
 #include <iostream>
-#include "ImageFactory.h"
+#include "Factories/ImageFactory.h"
+#include "System/System.h"
+#include "Utilities/Utilities.h"
 
 int main()
 {
-	Image* img = ImageFactory::imageFactory("federer.ppm");
 
-	img->grayscale();
-	img->save();
 }
