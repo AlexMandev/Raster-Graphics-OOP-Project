@@ -14,6 +14,14 @@ void Image::undoLastTransformation()
 		awaitingTransformations.popBack();
 }
 
+void Image::executeAllTransformations()
+{
+	for (size_t i = 0; i < awaitingTransformations.getSize(); i++)
+	{
+		executeTransformation(awaitingTransformations[i]->getType());
+	}
+}
+
 void Image::queueTransformation(const PolymorphicPtr<Transformation>& transformation)
 {
 	awaitingTransformations.pushBack(transformation);
@@ -52,5 +60,27 @@ void Image::setFileName(const String& newFileName)
 		throw std::exception("Invalid file name!\n");
 
 	fileName = newFileName;
+}
+
+void Image::executeTransformation(TransformationType type)
+{
+	switch (type)
+	{
+		case TransformationType::GRAYSCALE:
+			grayscale();
+			break;
+		case TransformationType::MONOCHROME:
+			monochrome();
+			break;
+		case TransformationType::NEGATIVE:
+			negative();
+			break;
+		case TransformationType::ROTATE_LEFT:
+			rotateLeft();
+			break;
+		case TransformationType::ROTATE_RIGHT:
+			rotateRight();
+			break;
+	}
 }
 

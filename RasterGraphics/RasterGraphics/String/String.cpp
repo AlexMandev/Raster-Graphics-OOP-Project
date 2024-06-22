@@ -3,6 +3,14 @@
 #pragma warning (disable : 4996)
 
 
+static char getLowerCharacter(char ch)
+{
+    if (ch >= 'A' && ch <= 'Z')
+        return (ch + 'a' - 'A');
+
+    return ch;
+}
+
 static unsigned roundToPowerOfTwo(unsigned v)
 {
     v--;
@@ -120,6 +128,14 @@ char& String::operator[](size_t index)
 const char& String::operator[](size_t index) const
 {
     return _data[index];
+}
+
+void String::toLower()
+{
+    for (size_t i = 0; i < getSize(); i++)
+    {
+        _data[i] = getLowerCharacter(_data[i]);
+    }
 }
 
 std::ostream& operator<<(std::ostream& os, const String& obj)

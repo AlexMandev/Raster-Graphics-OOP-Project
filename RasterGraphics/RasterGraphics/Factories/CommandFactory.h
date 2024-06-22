@@ -4,8 +4,6 @@
 class CommandFactory
 {
 public:
-	Command* readConsoleCommand();
-
-private:
+	static Command* readConsoleCommand();
 };
 

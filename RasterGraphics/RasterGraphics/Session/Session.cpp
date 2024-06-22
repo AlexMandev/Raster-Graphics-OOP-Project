@@ -33,7 +33,7 @@ int Session::getID() const
 	return sessionID;
 }
 
-void Session::save() const
+void Session::save()
 {
 	for (size_t i = 0; i < images.getSize(); i++)
 	{

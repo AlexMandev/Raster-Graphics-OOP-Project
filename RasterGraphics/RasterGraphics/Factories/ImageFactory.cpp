@@ -2,6 +2,7 @@
 #include "../Image/ImagePBM.h"
 #include "../Image/ImagePGM.h"
 #include "../Image/ImagePPM.h"
+#include "../Utilities/Utilities.h"
 #include <sstream>
 #include <fstream>
 

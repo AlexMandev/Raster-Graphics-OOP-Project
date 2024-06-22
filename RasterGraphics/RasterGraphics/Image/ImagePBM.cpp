@@ -35,7 +35,17 @@ void ImagePBM::negative()
     }
 }
 
-void ImagePBM::save() const
+void ImagePBM::rotateLeft()
+{
+
+}
+
+void ImagePBM::rotateRight()
+{
+
+}
+
+void ImagePBM::save()
 {
 
 }

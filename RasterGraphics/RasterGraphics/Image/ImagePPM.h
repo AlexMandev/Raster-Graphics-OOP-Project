@@ -43,8 +43,10 @@ public:
 	void grayscale() override;
 	void monochrome() override;
 	void negative() override;
+	void rotateLeft() override;
+	void rotateRight() override;
 
-	void save() const;
+	void save();
 
 	Image* clone() const override;
 

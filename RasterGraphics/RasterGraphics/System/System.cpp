@@ -11,7 +11,7 @@ System& System::getInstance()
 void System::queueTransformation(const PolymorphicPtr<Transformation>& transformation)
 {
     if (activeSessionID == -1)
-		throw std::exception("No active sessions!\n");
+		throw std::exception("No active sessions!");
 
 	int index = findCurrentSession();
 
@@ -85,7 +85,7 @@ void System::loadSession(const Vector<String>& files)
 void System::undo()
 {
 	if (activeSessionID == -1)
-		throw std::exception("No active sessions!\n");
+		throw std::exception("No active sessions!");
 
 	int index = findCurrentSession();
 
@@ -95,7 +95,7 @@ void System::undo()
 void System::switchSession(int newID)
 {
 	if (activeSessionID == -1)
-		throw std::exception("No active sessions!\n");
+		throw std::exception("No active sessions!");
 
 	for (size_t i = 0; i < sessions.getSize(); i++)
 	{
@@ -109,10 +109,10 @@ void System::switchSession(int newID)
 	throw std::exception("Session not found! Check if ID is correct.");
 }
 
-void System::saveCurrentSession() const
+void System::saveCurrentSession()
 {
 	if (activeSessionID == -1)
-		throw std::exception("No active sessions!\n");
+		throw std::exception("No active sessions!");
 
 	int index = findCurrentSession();
 
@@ -122,7 +122,7 @@ void System::saveCurrentSession() const
 void System::printCurrentSessionInfo() const
 {
 	if (activeSessionID == -1)
-		throw std::exception("No active sessions\n");
+		throw std::exception("No active sessions!");
 
 	int index = findCurrentSession();
 
@@ -132,7 +132,7 @@ void System::printCurrentSessionInfo() const
 void System::closeCurrentSession()
 {
 	if (activeSessionID == -1)
-		throw std::exception("No active sessions!\n");
+		throw std::exception("No active sessions!");
 
 	int index = findCurrentSession();
 
@@ -142,7 +142,7 @@ void System::closeCurrentSession()
 void System::saveCurrentSessionFileAs(const String& newFileName)
 {
 	if (activeSessionID == -1)
-		throw std::exception("No active sessions!\n");
+		throw std::exception("No active sessions!");
 
 	int index = findCurrentSession();
 
@@ -152,7 +152,7 @@ void System::saveCurrentSessionFileAs(const String& newFileName)
 void System::addImageToCurrentSession(const String& fileName)
 {
 	if (activeSessionID == -1)
-		throw std::exception("No active sessions!\n");
+		throw std::exception("No active sessions!");
 
 	int index = findCurrentSession();
 
@@ -164,5 +164,5 @@ void System::addImageToCurrentSession(const String& fileName)
 		return;
 	}
 	
-	throw std::exception("Couldn't open file!\n");
+	throw std::exception("Couldn't open file!");
 }

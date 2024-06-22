@@ -16,7 +16,7 @@ public:
 	void loadSession(const Vector<String>& files);
 	void undo();
 	void switchSession(int newID);
-	void saveCurrentSession() const;
+	void saveCurrentSession();
 	void printCurrentSessionInfo() const;
 	void closeCurrentSession();
 
@@ -32,7 +32,7 @@ public:
 
 private:
 	Vector<Session> sessions;
-	int activeSessionID = 0;
+	int activeSessionID = -1;
 	bool running = true;
 
 	System() = default;

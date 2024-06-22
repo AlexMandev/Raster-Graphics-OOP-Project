@@ -14,7 +14,7 @@ public:
 
 	int getID() const;
 
-	void save() const;
+	void save();
 
 	void saveFirstFileAs(const String& newFileName);
 

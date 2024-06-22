@@ -16,8 +16,10 @@ public:
 	void grayscale() override;
 	void monochrome() override;
 	void negative() override;
+	void rotateLeft() override;
+	void rotateRight() override;
 
-	void save() const override;
+	void save() override;
 
 	virtual Image* clone() const override;
 private:

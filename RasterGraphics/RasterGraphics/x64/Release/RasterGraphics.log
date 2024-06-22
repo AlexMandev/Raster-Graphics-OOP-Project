@@ -1,0 +1,8 @@
+﻿  ImageFactory.cpp
+C:\Users\Aleks\Downloads\Raster-Graphics-OOP-Project\RasterGraphics\RasterGraphics\Factories\ImageFactory.cpp(56,22): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+  Generating code
+  0 of 515 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  RasterGraphics.vcxproj -> C:\Users\Aleks\Downloads\Raster-Graphics-OOP-Project\RasterGraphics\x64\Release\RasterGraphics.exe

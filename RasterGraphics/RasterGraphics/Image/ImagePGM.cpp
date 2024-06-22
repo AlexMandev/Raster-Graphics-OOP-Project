@@ -6,6 +6,8 @@ ImagePGM::ImagePGM(unsigned width, unsigned height, unsigned maxColorNumber,
 	const uint8_t* const* pixels)
 	: Image(width, height, maxColorNumber, magicNumber, fileName)
 {
+	isGrayscale = true;
+	isMonochrome = false;
 	this->pixels = new uint8_t * [height];
 
 	for (size_t i = 0; i < height; i++)
@@ -23,6 +25,8 @@ ImagePGM::ImagePGM(unsigned width, unsigned height, unsigned maxColorNumber,
 	uint8_t**&& pixels)
 	: Image(width, height, maxColorNumber, magicNumber, fileName)
 {
+	isGrayscale = true;
+	isMonochrome = false;
 	this->pixels = pixels;
 	pixels = nullptr;
 }
@@ -71,6 +75,9 @@ void ImagePGM::grayscale()
 
 void ImagePGM::monochrome()
 {
+	if (isMonochrome)
+		return;
+
 	for (size_t i = 0; i < height; i++)
 	{
 		for (size_t j = 0; j < width; j++)
@@ -81,6 +88,7 @@ void ImagePGM::monochrome()
 				pixels[i][j] = maxColorNumber;
 		}
 	}
+	isMonochrome = true;
 }
 
 void ImagePGM::negative()
@@ -94,9 +102,72 @@ void ImagePGM::negative()
 	}
 }
 
-void ImagePGM::save() const
+void ImagePGM::rotateLeft()
 {
+	uint8_t** newPixels = new (std::nothrow) uint8_t * [width];
 
+	if (!newPixels)
+		return;
+
+	for (size_t i = 0; i < width; i++)
+	{
+		newPixels[i] = new uint8_t[height];
+	}
+
+	for (size_t i = 0; i < height; i++) {
+		for (int j = 0; j < width; j++) {
+			newPixels[width - j - 1][i] = pixels[i][j];
+		}
+	}
+
+	free();
+	std::swap(width, height);
+	pixels = newPixels;
+}
+
+void ImagePGM::rotateRight()
+{
+	uint8_t** newPixels = new (std::nothrow) uint8_t * [width];
+
+	if (!newPixels)
+		return;
+
+	for (size_t i = 0; i < width; i++)
+	{
+		newPixels[i] = new uint8_t[height];
+	}
+
+	for (size_t i = 0; i < height; i++) {
+		for (int j = 0; j < width; j++) {
+			newPixels[j][height - i - 1] = pixels[i][j];
+		}
+	}
+
+	free();
+	std::swap(width, height);
+	pixels = newPixels;
+}
+
+void ImagePGM::save()
+{
+	executeAllTransformations();
+
+	std::ofstream file(fileName.c_str());
+
+	file << magicNumber << std::endl;
+	file << width << ' ' << height << std::endl;
+	file << (uint16_t)maxColorNumber << std::endl;
+
+	for (size_t i = 0; i < height; i++)
+	{
+		for (size_t j = 0; j < width; j++)
+		{
+			file << (uint16_t)pixels[i][j] << ' ';
+		}
+		file << std::endl;
+	}
+
+	file.close();
 }
 
 Image* ImagePGM::clone() const

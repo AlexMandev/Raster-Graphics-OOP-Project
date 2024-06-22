@@ -6,30 +6,24 @@
 
 class Image
 {
-protected:
-	unsigned width = 0, height = 0;
-	uint8_t maxColorNumber = 0;
-	String magicNumber;
-	String fileName;
-	Vector<PolymorphicPtr<Transformation>> awaitingTransformations;
-
 public:
 	Image(unsigned width, unsigned height, unsigned maxColorNumber, String magicNumber, String fileName);
 
 	virtual void grayscale() = 0;
 	virtual void monochrome() = 0;
 	virtual void negative() = 0;
+	virtual void rotateLeft() = 0;
+	virtual void rotateRight() = 0;
 
 	virtual Image* clone() const = 0;
 	
-	virtual void save() const = 0;
+	virtual void save() = 0;
 
 	virtual const char* getFileExtension() const = 0;
 
 	void undoLastTransformation();
 
-
-
+	void executeAllTransformations();
 
 	void queueTransformation(const PolymorphicPtr<Transformation>& transformation);
 
@@ -43,4 +37,15 @@ public:
 	void setFileName(const String& newFileName);
 
 	virtual ~Image() = default;
+
+protected:
+	unsigned width = 0, height = 0;
+	uint8_t maxColorNumber = 0;
+	String magicNumber;
+	String fileName;
+	Vector<PolymorphicPtr<Transformation>> awaitingTransformations;
+	bool isGrayscale = true;
+	bool isMonochrome = true;
+
+	void executeTransformation(TransformationType type);
 };

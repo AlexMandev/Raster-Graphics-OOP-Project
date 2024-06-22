@@ -6,6 +6,8 @@ ImagePPM::ImagePPM(unsigned width, unsigned height, unsigned maxColorNumber,
     const Pixel* const* pixels)
     :Image(width, height, maxColorNumber, magicNumber, fileName)
 {
+    isGrayscale = false;
+    isMonochrome = false;
     this->pixels = new Pixel * [height];
     for (size_t i = 0; i < height; i++)
     {
@@ -17,8 +19,10 @@ ImagePPM::ImagePPM(unsigned width, unsigned height, unsigned maxColorNumber,
     }
 }
 
-void ImagePPM::save() const
+void ImagePPM::save()
 {
+    executeAllTransformations();
+
     std::ofstream file(fileName.c_str());
 
     file << magicNumber << std::endl;
@@ -32,7 +36,7 @@ void ImagePPM::save() const
         {
             for (size_t k = 0; k < 3; k++)
             {
-                file << (uint16_t)pixels[i][j].rgb[k] << " ";
+                file << (uint16_t)pixels[i][j].rgb[k] << ' ';
             }
         }
         file << std::endl;
@@ -46,6 +50,8 @@ ImagePPM::ImagePPM(unsigned width, unsigned height, unsigned maxColorNumber,
     Pixel**&& pixels)
     :Image(width, height, maxColorNumber, magicNumber, fileName)
 {
+    isGrayscale = false;
+    isMonochrome = false;
     this->pixels = pixels;
     pixels = nullptr;
 }
@@ -90,6 +96,9 @@ ImagePPM::~ImagePPM()
 
 void ImagePPM::grayscale()
 {
+    if (isGrayscale)
+        return;
+
     for (size_t i = 0; i < height; i++)
     {
         for (size_t j = 0; j < width; j++)
@@ -107,10 +116,14 @@ void ImagePPM::grayscale()
 
         }
     }
+    isGrayscale = true;
 }
 
 void ImagePPM::monochrome()
 {
+    if (isMonochrome)
+        return;
+
     for (size_t i = 0; i < height; i++)
     {
         for (size_t j = 0; j < width; j++)
@@ -130,6 +143,8 @@ void ImagePPM::monochrome()
             pixels[i][j].rgb[2] = monochromeValue;
         }
     }
+
+    isMonochrome = true;
 }
 
 void ImagePPM::negative()
@@ -145,6 +160,52 @@ void ImagePPM::negative()
             }
         }
     }
+}
+
+void ImagePPM::rotateLeft()
+{
+    Pixel** newPixels = new (std::nothrow) Pixel * [width];
+
+    if (!newPixels)
+        return;
+
+    for (size_t i = 0; i < width; i++) 
+    {
+        newPixels[i] = new Pixel[height];
+    }
+
+    for (size_t i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            newPixels[width - j - 1][i] = pixels[i][j];
+        }
+    }
+
+    free();
+    std::swap(width, height);
+    pixels = newPixels;
+}
+
+void ImagePPM::rotateRight()
+{
+    Pixel** newPixels = new (std::nothrow) Pixel * [width];
+
+    if (!newPixels)
+        return;
+
+    for (size_t i = 0; i < width; i++)
+    {
+        newPixels[i] = new Pixel[height];
+    }
+
+    for (size_t i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            newPixels[j][height - i - 1] = pixels[i][j];
+        }
+    }
+
+    free();
+    std::swap(width, height);
+    pixels = newPixels;
 }
 
 Image* ImagePPM::clone() const
