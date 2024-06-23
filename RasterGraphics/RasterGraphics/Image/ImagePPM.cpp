@@ -1,5 +1,6 @@
 #include "ImagePPM.h"
 #include <fstream>
+#include "../Utilities/Utilities.h"
 
 ImagePPM::ImagePPM(unsigned width, unsigned height, unsigned maxColorNumber, 
     String magicNumber, String fileName, 
@@ -206,6 +207,73 @@ void ImagePPM::rotateRight()
     free();
     std::swap(width, height);
     pixels = newPixels;
+}
+
+Image* ImagePPM::collageWith(const Image* img, Direction dir, const String& newFileName) const
+{
+    return img->collageWithPPM(this, dir, newFileName);
+}
+
+Image* ImagePPM::collageWithPPM(const ImagePPM* img, Direction dir, const String& newFileName) const
+{
+    if (!img)
+        return nullptr;
+
+    if (strcmp(extractFileExtension(newFileName.c_str()), getFileExtension()) != 0)
+        throw std::exception("Invalid new file name for collage!");
+
+    size_t newWidth = dir == Direction::HORIZONTAL ? width + img->getWidth() : width;
+    size_t newHeight = dir == Direction::HORIZONTAL ? height : height + img->getHeight();
+
+    Pixel** collagePixels = new Pixel * [newHeight];
+
+    for (size_t i = 0; i < newHeight; i++)
+    {
+        collagePixels[i] = new Pixel[newWidth];
+    }
+
+    for (size_t i = 0; i < height; i++)
+    {
+        for (size_t j = 0; j < width; j++)
+        {
+            collagePixels[i][j] = pixels[i][j];
+        }
+    }
+
+    if (dir == Direction::HORIZONTAL)
+    {
+        for (size_t i = 0; i < img->getHeight(); i++)
+        {
+            for (size_t j = 0; j < img->getWidth(); j++)
+            {
+                collagePixels[i][j + width] = img->pixels[i][j];
+            }
+        }
+    }
+    else
+    {
+        for (size_t i = 0; i < img->getHeight(); i++)
+        {
+            for (size_t j = 0; j < img->getWidth(); j++)
+            {
+                collagePixels[i + height][j] = img->pixels[i][j];
+            }
+        }
+    }
+
+    return new ImagePPM(newWidth, newHeight,
+        (maxColorNumber > img->maxColorNumber ? maxColorNumber : img->maxColorNumber), 
+        "P3", newFileName, std::move(collagePixels));
+}
+
+Image* ImagePPM::collageWithPBM(const ImagePBM* img, Direction dir, const String& newFileName) const
+{
+    throw std::logic_error("Can't collage different types!");
+}
+
+Image* ImagePPM::collageWithPGM(const ImagePGM* img, Direction dir, const String& newFileName) const
+{
+    throw std::logic_error("Can't collage different types!");
 }
 
 Image* ImagePPM::clone() const

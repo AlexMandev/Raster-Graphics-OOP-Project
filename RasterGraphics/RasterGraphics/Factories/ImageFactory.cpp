@@ -48,13 +48,26 @@ PolymorphicPtr<Image> ImageFactory::readPBMInASCII(std::ifstream& inFile, const 
     inFile >> width >> height;
 
     Bitset data(width * height - 1);
-    unsigned length = width * height;
-    bool b;
-    for (size_t i = 0; i < length; i++)
+    size_t length = width * height;
+    char ch;
+    size_t iter = 0;
+
+    while (iter < length && !inFile.eof())
     {
-        inFile >> b;
-        if (b)
-            data.add(i);
+        char ch = inFile.get();
+        
+        switch (ch)
+        {
+            case '0':
+                iter++;
+                break;
+            case '1':
+                data.add(iter);
+                iter++;
+                break;
+            default:
+                continue;
+        }
     }
 
     return new ImagePBM(width, height, "P1", fileName, std::move(data));

@@ -65,21 +65,31 @@ void System::loadSession(const Vector<String>& files)
 	
 	for (size_t i = 0; i < files.getSize(); i++)
 	{
+		std::cout << "Loading " << files[i].c_str() << "...\n";
 		PolymorphicPtr<Image> img = ImageFactory::imageFactory(files[i].c_str());
 
 		if (img.get())
 		{
+			std::cout << "Loaded " << files[i].c_str() << std::endl;
 			toLoad.addImage(std::move(img));
 			loaded++;
+		}
+		else
+		{
+			std::cout << "Couldn't open " << files[i].c_str() << "!\n";
 		}
 	}
 
 	if (loaded)
 	{
+		std::cout << "Started session with ID: " << toLoad.getID() << std::endl;
 		activeSessionID = toLoad.getID();
 		sessions.pushBack(std::move(toLoad));
 	}
-
+	else
+	{
+		std::cout << "Couldn't load session! None of the images could be opened.\n";
+	}
 }
 
 void System::undo()
@@ -137,6 +147,9 @@ void System::closeCurrentSession()
 	int index = findCurrentSession();
 
 	sessions.popAt(index);
+
+	if(sessions.empty())
+		activeSessionID == -1;
 }
 
 void System::saveCurrentSessionFileAs(const String& newFileName)
@@ -147,6 +160,16 @@ void System::saveCurrentSessionFileAs(const String& newFileName)
 	int index = findCurrentSession();
 
 	sessions[index].saveFirstFileAs(newFileName);
+}
+
+void System::addCollageFile(Direction dir, const String& first, const String& second, const String& newFileName)
+{
+	if (activeSessionID == -1)
+		throw std::exception("No active sessions!");
+
+	int index = findCurrentSession();
+
+	sessions[index].addCollageFile(dir, first, second, newFileName);
 }
 
 void System::addImageToCurrentSession(const String& fileName)

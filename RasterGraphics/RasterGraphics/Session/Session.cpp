@@ -41,6 +41,50 @@ void Session::save()
 	}
 }
 
+void Session::addCollageFile(Direction dir, const String& first, const String& second, const String& newFileName)
+{
+	bool hasFirst = false;
+	bool hasSecond = false;
+
+	size_t firstInd, secondInd;
+
+	// searching for images
+
+	for (size_t i = 0; i < images.getSize(); i++)
+	{
+		if (!hasFirst && !strcmp(first.c_str(), images[i]->getFileName().c_str()))
+		{
+			firstInd = i;
+			hasFirst = true;
+		}
+		if (!hasSecond && !strcmp(second.c_str(), images[i]->getFileName().c_str()))
+		{
+			secondInd = i;
+			hasSecond = true;
+		}
+	}
+
+	if (!hasFirst)
+	{
+		throw std::exception("Couldn't find first image of the collage");
+	}
+	else if (!hasSecond)
+	{
+		throw std::exception("Couldn't find second image of the collage");
+	}
+
+	PolymorphicPtr<Image> collage = images[secondInd]->collageWith(images[firstInd].get(), dir, newFileName);
+
+	if (collage.get())
+	{
+		images.pushBack(std::move(collage));
+	}
+	else
+	{
+		throw std::exception("Couldn't collage images!");
+	}
+}
+
 void Session::saveFirstFileAs(const String& newFileName)
 {
 	if (images.getSize() == 0)

@@ -1,34 +1,3 @@
-﻿  Add.cpp
-  Close.cpp
-  Exit.cpp
-  Help.cpp
-  Load.cpp
-  Save.cpp
-  SessionInfo.cpp
-  Switch.cpp
-  Undo.cpp
-  Grayscale.cpp
-  Monochrome.cpp
-  Negative.cpp
-  RotateLeft.cpp
-  RotateRight.cpp
-  CommandFactory.cpp
-  ImageFactory.cpp
-C:\Users\Aleks\Downloads\Raster-Graphics-OOP-Project\RasterGraphics\RasterGraphics\Factories\ImageFactory.cpp(56,22): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-  Image.cpp
-  ImagePBM.cpp
-C:\Users\Aleks\Downloads\Raster-Graphics-OOP-Project\RasterGraphics\RasterGraphics\Image\ImagePBM.cpp(31,27): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-C:\Users\Aleks\Downloads\Raster-Graphics-OOP-Project\RasterGraphics\RasterGraphics\Image\ImagePBM.cpp(32,25): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-C:\Users\Aleks\Downloads\Raster-Graphics-OOP-Project\RasterGraphics\RasterGraphics\Image\ImagePBM.cpp(34,22): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
-  ImagePGM.cpp
-  ImagePPM.cpp
-C:\Users\Aleks\Downloads\Raster-Graphics-OOP-Project\RasterGraphics\RasterGraphics\Image\ImagePPM.cpp(99,40): warning C4244: 'initializing': conversion from 'double' to 'uint8_t', possible loss of data
-C:\Users\Aleks\Downloads\Raster-Graphics-OOP-Project\RasterGraphics\RasterGraphics\Image\ImagePPM.cpp(119,37): warning C4244: 'initializing': conversion from 'double' to 'uint8_t', possible loss of data
-  Generating Code...
-  Compiling...
-  RasterGraphics.cpp
-  Session.cpp
-  System.cpp
-C:\Users\Aleks\Downloads\Raster-Graphics-OOP-Project\RasterGraphics\RasterGraphics\System\System.cpp(36,11): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  Generating Code...
+﻿  ImageFactory.cpp
+C:\Users\Aleks\Downloads\Raster-Graphics-OOP-Project\RasterGraphics\RasterGraphics\Factories\ImageFactory.cpp(58,22): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
   RasterGraphics.vcxproj -> C:\Users\Aleks\Downloads\Raster-Graphics-OOP-Project\RasterGraphics\x64\Debug\RasterGraphics.exe

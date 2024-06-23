@@ -16,6 +16,8 @@ public:
 
 	void save();
 
+	void addCollageFile(Direction dir, const String& first, const String& second, const String& newFileName);
+
 	void saveFirstFileAs(const String& newFileName);
 
 	void queueTransformation(const PolymorphicPtr<Transformation>& transformation);

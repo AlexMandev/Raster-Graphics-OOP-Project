@@ -13,10 +13,22 @@
 #include "../Command/Transformation/Negative.h"
 #include "../Command/Transformation/RotateLeft.h"
 #include "../Command/Transformation/RotateRight.h"
+#include "../Command/Commands/Collage.h"
 
 #include <iostream>
 #include <sstream>
 #include "../Collections/Vector.hpp"
+
+
+static Direction getDirection(const char* dir)
+{
+    if (strcmp(dir, "horizontal") == 0)
+        return Direction::HORIZONTAL;
+    else if (strcmp(dir, "vertical") == 0)
+        return Direction::VERTICAL;
+    else
+        throw std::exception("Invalid direction!");
+}
 
 static Vector<String> readVectorOfStrings(std::stringstream& ss)
 {
@@ -94,7 +106,7 @@ Command* CommandFactory::readConsoleCommand()
         Vector<String> files = readVectorOfStrings(line);
 
         if (files.empty())
-            throw std::exception("No file names given!\n");
+            throw std::exception("No file names given!");
 
         return new Load(std::move(files));
     }
@@ -111,7 +123,7 @@ Command* CommandFactory::readConsoleCommand()
         }
         else 
         {
-            throw std::exception("Invalid command!\n");
+            throw std::exception("Invalid command!");
         }
     }
     else if (command == "switch")
@@ -123,7 +135,7 @@ Command* CommandFactory::readConsoleCommand()
 
         if (!line.eof() || line.fail())
         {
-            throw std::exception("Invalid command!\n");
+            throw std::exception("Invalid command!");
         }
         else
         {
@@ -135,7 +147,7 @@ Command* CommandFactory::readConsoleCommand()
         skipIntervalsInStringStream(line);
         if (line.eof())
         {
-            throw std::exception("Invalid command!\n");
+            throw std::exception("Invalid command!");
         }
         else 
         {
@@ -148,7 +160,7 @@ Command* CommandFactory::readConsoleCommand()
                 return new SessionInfo();
             }
             else {
-                throw std::exception("Invalid command!\n");
+                throw std::exception("Invalid command!");
             }
         }
     }
@@ -157,7 +169,7 @@ Command* CommandFactory::readConsoleCommand()
         skipIntervalsInStringStream(line);
         if (line.eof())
         {
-            throw std::exception("Invalid command!\n");
+            throw std::exception("Invalid command!");
         }
         else
         {
@@ -176,12 +188,32 @@ Command* CommandFactory::readConsoleCommand()
             }
             else
             {
-                throw std::exception("Invalid command!\n");
+                throw std::exception("Invalid command!");
+            }
+        }
+    }
+    else if (command == "collage")
+    {
+        skipIntervalsInStringStream(line);
+        String direction;
+        line >> direction;
+        Direction dir = getDirection(direction.c_str());
+        if (line.eof())
+            throw std::exception("Invalid command!");
+        else
+        {
+            String first, second, newFileName;
+            line >> first >> second >> newFileName;
+            if (line.fail())
+                throw std::exception("Invalid command!");
+            else
+            {
+                return new Collage(dir, first, second, newFileName);
             }
         }
     }
     else
     {
-        throw std::exception("Invalid command!\n");
+        throw std::exception("Invalid command!");
     }
 }

@@ -4,6 +4,16 @@
 #include "../Collections/Vector.hpp"
 #include "../Command/Transformation/Transformation.h"
 
+class ImagePPM;
+class ImagePGM;
+class ImagePBM;
+
+enum class Direction
+{
+	HORIZONTAL,
+	VERTICAL
+};
+
 class Image
 {
 public:
@@ -17,6 +27,12 @@ public:
 
 	virtual Image* clone() const = 0;
 	
+	virtual Image* collageWith(const Image* img, Direction dir, const String& newFileName) const = 0;
+
+	virtual Image* collageWithPPM(const ImagePPM* img, Direction dir, const String& newFileName) const = 0;
+	virtual Image* collageWithPBM(const ImagePBM* img, Direction dir, const String& newFileName) const = 0;
+	virtual Image* collageWithPGM(const ImagePGM* img, Direction dir, const String& newFileName) const = 0;
+
 	virtual void save() = 0;
 
 	virtual const char* getFileExtension() const = 0;

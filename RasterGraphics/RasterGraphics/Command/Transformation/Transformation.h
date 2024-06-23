@@ -1,7 +1,7 @@
 #pragma once
 #include "../Command.h"
 
-enum TransformationType
+enum class TransformationType
 {
 	GRAYSCALE,
 	MONOCHROME,

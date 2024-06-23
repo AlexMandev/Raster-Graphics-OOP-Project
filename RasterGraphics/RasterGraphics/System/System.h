@@ -22,6 +22,8 @@ public:
 
 	void saveCurrentSessionFileAs(const String& newFileName);
 
+	void addCollageFile(Direction dir, const String& first, const String& second, const String& newFileName);
+
 	void addImageToCurrentSession(const String& fileName);
 
 	void queueTransformation(const PolymorphicPtr<Transformation>& transformation);

@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Command\Commands\Collage.cpp" />
     <ClCompile Include="Factories\CommandFactory.cpp" />
     <ClCompile Include="Command\Commands\Add.cpp" />
     <ClCompile Include="Command\Commands\Close.cpp" />
@@ -157,6 +158,7 @@
     <ClCompile Include="Utilities\Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Command\Commands\Collage.h" />
     <ClInclude Include="Factories\CommandFactory.h" />
     <ClInclude Include="Command\Commands\Add.h" />
     <ClInclude Include="Command\Commands\Close.h" />

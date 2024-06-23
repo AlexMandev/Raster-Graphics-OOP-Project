@@ -148,6 +148,73 @@ void ImagePGM::rotateRight()
 	pixels = newPixels;
 }
 
+Image* ImagePGM::collageWith(const Image* img, Direction dir, const String& newFileName) const
+{
+	return img->collageWithPGM(this, dir, newFileName);
+}
+
+Image* ImagePGM::collageWithPPM(const ImagePPM* img, Direction dir, const String& newFileName) const
+{
+	throw std::logic_error("Can't collage different types!");
+}
+
+Image* ImagePGM::collageWithPBM(const ImagePBM* img, Direction dir, const String& newFileName) const
+{
+	throw std::logic_error("Can't collage different types!");
+}
+
+Image* ImagePGM::collageWithPGM(const ImagePGM* img, Direction dir, const String& newFileName) const
+{
+	if (!img)
+		return nullptr;
+
+	if (newFileName != getFileExtension())
+		throw std::exception("Invalid new file name for collage!");
+
+	size_t newWidth = dir == Direction::HORIZONTAL ? width + img->getWidth() : width;
+	size_t newHeight = dir == Direction::HORIZONTAL ? height : height + img->getHeight();
+
+	uint8_t** collagePixels = new uint8_t * [newHeight];
+
+	for (size_t i = 0; i < newHeight; i++)
+	{
+		collagePixels[i] = new uint8_t[newWidth];
+	}
+
+	for (size_t i = 0; i < height; i++)
+	{
+		for (size_t j = 0; j < width; j++)
+		{
+			collagePixels[i][j] = pixels[i][j];
+		}
+	}
+
+	if (dir == Direction::HORIZONTAL)
+	{
+		for (size_t i = 0; i < img->getHeight(); i++)
+		{
+			for (size_t j = 0; j < img->getWidth(); j++)
+			{
+				collagePixels[i][j + width] = img->pixels[i][j];
+			}
+		}
+	}
+	else
+	{
+		for (size_t i = 0; i < img->getHeight(); i++)
+		{
+			for (size_t j = 0; j < img->getWidth(); j++)
+			{
+				collagePixels[i + height][j] = img->pixels[i][j];
+			}
+		}
+	}
+
+	return new ImagePGM(newWidth, newHeight,
+		(maxColorNumber > img->maxColorNumber ? maxColorNumber : img->maxColorNumber),
+		"P2", newFileName, std::move(collagePixels));
+}
+
 void ImagePGM::save()
 {
 	executeAllTransformations();

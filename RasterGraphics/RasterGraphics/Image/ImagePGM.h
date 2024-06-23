@@ -33,6 +33,12 @@ public:
 	void rotateLeft() override;
 	void rotateRight() override;
 
+	Image* collageWith(const Image* img, Direction dir, const String& newFileName) const override;
+
+	Image* collageWithPPM(const ImagePPM* img, Direction dir, const String& newFileName) const override;
+	Image* collageWithPBM(const ImagePBM* img, Direction dir, const String& newFileName) const override;
+	Image* collageWithPGM(const ImagePGM* img, Direction dir, const String& newFileName) const override;
+
 	void save() override;
 
 	Image* clone() const override;
