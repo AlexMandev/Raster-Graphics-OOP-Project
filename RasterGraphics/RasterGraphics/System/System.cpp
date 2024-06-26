@@ -82,6 +82,7 @@ void System::loadSession(const Vector<String>& files)
 
 	if (loaded)
 	{
+		toLoad.registerSession();
 		std::cout << "Started session with ID: " << toLoad.getID() << std::endl;
 		activeSessionID = toLoad.getID();
 		sessions.pushBack(std::move(toLoad));
@@ -112,6 +113,7 @@ void System::switchSession(int newID)
 		if (sessions[i].getID() == newID)
 		{
 			activeSessionID = newID;
+			std::cout << "Switched to session with ID " << newID << std::endl;
 			return;
 		}
 	}
@@ -149,7 +151,7 @@ void System::closeCurrentSession()
 	sessions.popAt(index);
 
 	if(sessions.empty())
-		activeSessionID == -1;
+		activeSessionID = -1;
 }
 
 void System::saveCurrentSessionFileAs(const String& newFileName)

@@ -105,7 +105,7 @@ PolymorphicPtr<Image> ImageFactory::readPPMInASCII(std::ifstream& inFile, const 
     {
         inFile.ignore(1024, '\n');
     }
-    std::cout << inFile.is_open();
+
     int width, height, maxColorNumber;
     inFile >> width >> height >> maxColorNumber;
 

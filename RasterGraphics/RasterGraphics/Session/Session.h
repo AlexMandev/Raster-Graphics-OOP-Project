@@ -5,8 +5,8 @@
 class Session
 {
 public:
-	Session();
-	 
+	Session() = default;
+
 	void addImage(const PolymorphicPtr<Image>& newImage);
 	void addImage(PolymorphicPtr<Image>&& newImage);
 
@@ -16,6 +16,8 @@ public:
 
 	void save();
 
+	void registerSession();
+
 	void addCollageFile(Direction dir, const String& first, const String& second, const String& newFileName);
 
 	void saveFirstFileAs(const String& newFileName);
@@ -24,9 +26,9 @@ public:
 	void removeLastTransformation();
 
 private:
-	static unsigned createdSessionsCounter;
+	static unsigned registeredSessionsCounter;
 
-	int sessionID;
+	int sessionID = -1;
 	Vector<PolymorphicPtr<Image>> images;
 };
 

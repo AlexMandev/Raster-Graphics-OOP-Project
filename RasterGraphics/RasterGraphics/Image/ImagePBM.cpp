@@ -109,6 +109,12 @@ Image* ImagePBM::collageWithPBM(const ImagePBM* img, Direction dir, const String
     if (!img)
         return nullptr;
 
+    if (dir == Direction::HORIZONTAL && height != img->getHeight())
+        throw std::logic_error("Can't collage images with different heights horizontally!");
+    else if (width != img->getWidth())
+        throw std::logic_error("Can't collage images with different widths vertically!");
+        
+
     if (strcmp(extractFileExtension(newFileName.c_str()), getFileExtension()) != 0)
         throw std::exception("Invalid new file name for collage!");
 
@@ -152,7 +158,7 @@ Image* ImagePBM::collageWithPBM(const ImagePBM* img, Direction dir, const String
         }
     }
 
-    return new ImagePBM(width, height, "P1", newFileName, std::move(newData));
+    return new ImagePBM(newWidth, newHeight, "P1", newFileName, std::move(newData));
 }
 
 Image* ImagePBM::collageWithPGM(const ImagePGM* img, Direction dir, const String& newFileName) const

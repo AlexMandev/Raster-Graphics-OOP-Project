@@ -1,13 +1,7 @@
 #include "Session.h"
 #include "../Utilities/Utilities.h"
 
-unsigned Session::createdSessionsCounter = 0;
-
-Session::Session()
-{
-	createdSessionsCounter++;
-	sessionID = createdSessionsCounter;
-}
+unsigned Session::registeredSessionsCounter = 0;
 
 void Session::addImage(const PolymorphicPtr<Image>& newImage)
 {
@@ -21,7 +15,7 @@ void Session::addImage(PolymorphicPtr<Image>&& newImage)
 
 void Session::printSessionInfo(std::ostream& out = std::cout) const
 {
-	out << "Session " << sessionID << "with images: " << std::endl;
+	out << "Session " << sessionID << " with images: " << std::endl;
 	for (size_t i = 0; i < images.getSize(); i++)
 	{
 		images[i]->printInfo(out);
@@ -37,8 +31,15 @@ void Session::save()
 {
 	for (size_t i = 0; i < images.getSize(); i++)
 	{
+		std::cout << "Saving " << images[i]->getFileName() << "...\n";
 		images[i]->save();
 	}
+}
+
+void Session::registerSession()
+{
+	registeredSessionsCounter++;
+	sessionID = registeredSessionsCounter;
 }
 
 void Session::addCollageFile(Direction dir, const String& first, const String& second, const String& newFileName)
@@ -77,6 +78,7 @@ void Session::addCollageFile(Direction dir, const String& first, const String& s
 
 	if (collage.get())
 	{
+		std::cout << "Collage with name " << collage->getFileName() << "created successfully!\n";
 		images.pushBack(std::move(collage));
 	}
 	else
