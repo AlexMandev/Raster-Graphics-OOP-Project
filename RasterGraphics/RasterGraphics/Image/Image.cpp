@@ -1,7 +1,7 @@
 #include "Image.h"
 #include "../Utilities/Utilities.h"
 
-Image::Image(unsigned width, unsigned height, unsigned maxColorNumber, String magicNumber, String fileName)
+Image::Image(unsigned width, unsigned height, unsigned maxColorNumber,const String& magicNumber, const String& fileName)
 	:width(width), height(height) , maxColorNumber(maxColorNumber), magicNumber(magicNumber),
 	fileName(fileName)
 {
@@ -20,6 +20,7 @@ void Image::executeAllTransformations()
 	{
 		executeTransformation(awaitingTransformations[i]->getType());
 	}
+	awaitingTransformations.clear();
 }
 
 void Image::queueTransformation(const PolymorphicPtr<Transformation>& transformation)

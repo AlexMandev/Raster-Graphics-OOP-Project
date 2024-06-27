@@ -8,7 +8,7 @@ public:
 		constructor copying the pixels
 	*/
 	ImagePGM(unsigned width, unsigned height, unsigned maxColorNumber, 
-		String magicNumber, String fileName,
+		const String& magicNumber, const String& fileName,
 		const uint8_t* const* pixels);
 
 
@@ -16,7 +16,7 @@ public:
 		constructor moving the pixels (will be used in the factory)
 	*/
 	ImagePGM(unsigned width, unsigned height, unsigned maxColorNumber,
-		String magicNumber, String fileName,
+		const String& magicNumber, const String& fileName,
 		uint8_t**&& pixels);
 
 	ImagePGM(const ImagePGM& other);

@@ -17,7 +17,8 @@ enum class Direction
 class Image
 {
 public:
-	Image(unsigned width, unsigned height, unsigned maxColorNumber, String magicNumber, String fileName);
+	Image(unsigned width, unsigned height, unsigned maxColorNumber,
+		const String& magicNumber, const String& fileName);
 
 	virtual void grayscale() = 0;
 	virtual void monochrome() = 0;

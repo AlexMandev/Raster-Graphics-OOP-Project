@@ -34,6 +34,7 @@ void Session::save()
 		std::cout << "Saving " << images[i]->getFileName() << "...\n";
 		images[i]->save();
 	}
+	std::cout << "Session " << getID() << " saved!\n";
 }
 
 void Session::registerSession()

@@ -6,10 +6,10 @@ class ImagePBM : public Image
 {
 public:
 	ImagePBM(unsigned width, unsigned height,
-		String magicNumber,String fileName, const Bitset& data);
+		const String& magicNumber, const String& fileName, const Bitset& data);
 
 	ImagePBM(unsigned width, unsigned height,
-		String magicNumber, String fileName, Bitset&& data);
+		const String& magicNumber, const String& fileName, Bitset&& data);
 
 	const char* getFileExtension() const override;
 

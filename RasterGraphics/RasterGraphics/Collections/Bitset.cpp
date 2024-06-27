@@ -7,13 +7,13 @@ Bitset::Bitset(unsigned N)
 	this->N = N;
 }
 
-Bitset::Bitset(unsigned n, uint8_t*&& buckets, unsigned bucketsCount)
-{
-	N = n;
-	this->buckets = buckets;
-	buckets = nullptr;
-	this->bucketsCount = bucketsCount;
-}
+//Bitset::Bitset(unsigned n, uint8_t*&& buckets, unsigned bucketsCount)
+//{
+//	N = n;
+//	this->buckets = buckets;
+//	buckets = nullptr;
+//	this->bucketsCount = bucketsCount;
+//}
 
 void Bitset::free()
 {

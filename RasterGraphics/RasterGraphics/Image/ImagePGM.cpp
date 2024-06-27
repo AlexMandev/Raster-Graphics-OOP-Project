@@ -2,7 +2,7 @@
 #include <fstream>
 
 ImagePGM::ImagePGM(unsigned width, unsigned height, unsigned maxColorNumber, 
-	String magicNumber, String fileName,
+	const String& magicNumber, const String& fileName,
 	const uint8_t* const* pixels)
 	: Image(width, height, maxColorNumber, magicNumber, fileName)
 {
@@ -21,7 +21,7 @@ ImagePGM::ImagePGM(unsigned width, unsigned height, unsigned maxColorNumber,
 }
 
 ImagePGM::ImagePGM(unsigned width, unsigned height, unsigned maxColorNumber, 
-	String magicNumber, String fileName, 
+	const String& magicNumber, const String& fileName,
 	uint8_t**&& pixels)
 	: Image(width, height, maxColorNumber, magicNumber, fileName)
 {

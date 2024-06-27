@@ -16,7 +16,8 @@ class Bitset
 	unsigned getBucketIndex(unsigned num) const;
 public:
 	Bitset(unsigned n);
-	Bitset(unsigned n, uint8_t*&& buckets, unsigned bucketsCount);
+
+	/*Bitset(unsigned n, uint8_t*&& buckets, unsigned bucketsCount);*/
 
 	Bitset(const Bitset& other);
 	Bitset& operator=(const Bitset& other);

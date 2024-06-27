@@ -57,7 +57,7 @@ Command* CommandFactory::readConsoleCommand()
 
     char buffer[1024];
 
-    std::cout << '>';
+    std::cout << ">>>";
 
     std::cin.getline(buffer, 1024);
 

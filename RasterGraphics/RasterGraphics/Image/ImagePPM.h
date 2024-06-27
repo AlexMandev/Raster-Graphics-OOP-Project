@@ -22,14 +22,14 @@ public:
 		Constructor copying the pixels
 	*/
 	ImagePPM(unsigned width, unsigned height, unsigned maxColorNumber, 
-		String magicNumber, String fileName,
+		const String& magicNumber, const String& fileName,
 		const Pixel* const * pixels); 
 
 	/*
 		constructor moving the pixels (will be used in the factory)
 	*/
 	ImagePPM(unsigned width, unsigned height, unsigned maxColorNumber, 
-		String magicNumber, String fileName,
+		const String& magicNumber, const String& fileName,
 		Pixel**&& pixels);
 
 	ImagePPM(const ImagePPM& other);

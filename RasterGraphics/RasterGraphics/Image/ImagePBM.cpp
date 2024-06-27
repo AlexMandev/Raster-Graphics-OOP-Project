@@ -2,11 +2,11 @@
 #include <fstream>
 #include "../Utilities/Utilities.h"
 
-ImagePBM::ImagePBM(unsigned width, unsigned height, String magicNumber, String fileName, const Bitset& data)
+ImagePBM::ImagePBM(unsigned width, unsigned height, const String& magicNumber, const String& fileName, const Bitset& data)
     :Image(width, height, 1, magicNumber, fileName), data(data)
 { }
 
-ImagePBM::ImagePBM(unsigned width, unsigned height, String magicNumber, String fileName, Bitset && data)
+ImagePBM::ImagePBM(unsigned width, unsigned height, const String& magicNumber, const String& fileName, Bitset && data)
     :Image(width, height, 1, magicNumber, fileName), data(std::move(data))
 {
 }

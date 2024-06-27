@@ -3,7 +3,7 @@
 #include "../Utilities/Utilities.h"
 
 ImagePPM::ImagePPM(unsigned width, unsigned height, unsigned maxColorNumber, 
-    String magicNumber, String fileName, 
+    const String& magicNumber, const String& fileName,
     const Pixel* const* pixels)
     :Image(width, height, maxColorNumber, magicNumber, fileName)
 {
@@ -47,7 +47,7 @@ void ImagePPM::save()
 }
 
 ImagePPM::ImagePPM(unsigned width, unsigned height, unsigned maxColorNumber, 
-    String magicNumber, String fileName, 
+    const String& magicNumber, const String& fileName,
     Pixel**&& pixels)
     :Image(width, height, maxColorNumber, magicNumber, fileName)
 {
